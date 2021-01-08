@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    app:cardCornerRadius="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <ImageView
+           android:id="@+id/food_image"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/image_size"
+           android:contentDescription="@string/add_food" />
+       <LinearLayout
+           android:padding="@dimen/food_item_padding"
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_height="match_parent">
+
+
+           <TextView
+               android:layout_marginTop="@dimen/text_margin"
+               android:textAppearance="?android:textAppearanceLarge"
+               tools:text="Hello Food"
+               android:textStyle="bold"
+               android:id="@+id/food_title_tv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:layout_marginTop="@dimen/text_margin"
+               android:id="@+id/desc_tv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <include
+               android:id="@+id/size_prize_layout" layout="@layout/size_and_price_item_layout"/>
+       </LinearLayout>
+   </LinearLayout>
+</androidx.cardview.widget.CardView>

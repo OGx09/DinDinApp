@@ -1,5 +1,6 @@
 package com.example.dindinapp.di
 
+import com.example.dindinapp.adapter.FoodAdapter
 import com.example.dindinapp.repository.FoodRepository
 import com.example.dindinapp.repository.network.FoodService
 import com.example.dindinapp.repository.network.MockWebServer
@@ -30,4 +31,5 @@ val appModule = module {
     factory { provideRetrofit() }
     single { provideFoodService(get()) }
     single { FoodRepository(get()) }
+    factory { FoodAdapter() }
 }
