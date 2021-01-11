@@ -52,10 +52,7 @@ class SecondFragment : BaseMvRxFragment() {
     }
 
     override fun invalidate() {
-        withState(foodDeliveryViewModel){
 
-           // Log.d("SecondFragmentWWW", "HELLLLLLLLLOOOOOOO ${it.foodMenuDetails}")
-        }
      }
 
     override fun onCreateView(
@@ -106,9 +103,6 @@ class SecondFragment : BaseMvRxFragment() {
         return binding.root
     }
 
-    override fun onPause() {
-        super.onPause()
-    }
 
 
     private fun setUpFoodMenuRvLayoutManager(binding: FragmentSecondBinding){

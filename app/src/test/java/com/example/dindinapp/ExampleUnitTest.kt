@@ -12,7 +12,7 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        System.out.println("=====" + MockWebServer().mock().toString())
+        //System.out.println("=====" + MockWebServer().mock().toString())
         assertEquals(4, 2 + 2)
     }
 }

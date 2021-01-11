@@ -164,12 +164,8 @@ class FirstFragment :BaseMvRxFragment(){
     }
 
     private fun setUpTopAdRvLayoutManager(){
-        try {
-            binding.pager.adapter = topAdViewPagerAdapter
-            binding.dotsIndicator.setViewPager(binding.pager)
-        }catch (e: Exception){
-            e.printStackTrace()
-        }
+        binding.pager.adapter = topAdViewPagerAdapter
+        binding.dotsIndicator.setViewPager(binding.pager)
     }
 
     override fun invalidate() {
@@ -218,27 +214,11 @@ class FirstFragment :BaseMvRxFragment(){
     }
 
 
-    private fun showMessage(message: String){
-        Snackbar.make(requireActivity().window.decorView, message, Snackbar.LENGTH_LONG)
-            .setAction("Action", null).show()
-    }
-
     override fun onResume() {
         super.onResume()
         this.hasTabs = false
         counterFab.setImageResource(R.drawable.ic_baseline_add_shopping_cart_24)
     }
-
-
-    fun appBarVisible(){
-        binding.appbar.visibility = View.VISIBLE
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        //binding = null
-    }
-
 
 
 }

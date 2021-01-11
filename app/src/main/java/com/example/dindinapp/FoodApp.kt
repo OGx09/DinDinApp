@@ -8,7 +8,7 @@ import org.koin.core.context.startKoin
 // Created by Gbenga Oladipupo(Devmike01) on 1/7/21.
 
 
-class FoodApp : Application() {
+open class FoodApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
